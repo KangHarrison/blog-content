@@ -1,14 +1,14 @@
 ---
-title: blog title
+title: demo blog
 date: 2020-08-03 17:34:32
 author: Harrison
 categories:
-  - 'categories'
+  - 'demo'
 tags:
-  - 'tags1'
-  - 'tags2'
+  - 'demo'
+
 ---
-简要说明
+this blog's summary ~
 <!-- more -->
 
 正文: 使用Markdown语法
