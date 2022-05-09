@@ -3,9 +3,9 @@ title: arthas-线上排查BUG神器
 date: 2022-05-09 13:29:00
 author: Harrison
 categories:
-  - 'arthas'
+  - 'Arthas'
 tags:
-  - 'arthas'
+  - 'Arthas'
 
 ---
 arthas使用的简单介绍~
