@@ -12,7 +12,7 @@ arthas使用的简单介绍~
 <!-- more -->
 
 ### 1. arthas介绍
-[Arthas](https://arthas.aliyun.com/doc/)是Alibaba开源的Java诊断工具，采用命令行交互模式，提供了丰富的功能，是排查jvm相关问题的利器
+[Arthas](https://arthas.aliyun.com/doc/)是Alibaba开co源的Java诊断工具，采用命令行交互模式，提供了丰富的功能，是排查jvm相关问题的利器
 
 ### 2. arthas整合到jdk镜像
 #### 2.1 docker要求18版本以上
