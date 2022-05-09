@@ -34,7 +34,5 @@ jobs:
           # 重启的脚本，根据自身情况做相应改动，一般要做的是migrate数据库以及重启服务器
           script: |
             cd /root/blog/source/
-            rm -rf _posts
-            mv blogs _posts
-            hexo clean
-            hexo g
+            sh deploy.sh
+            
