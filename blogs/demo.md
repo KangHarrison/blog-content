@@ -12,3 +12,5 @@ this blog's summary ~
 <!-- more -->
 
 正文: 使用Markdown语法
+
+欢迎使用 GitHub + Hexo 搭建博客
