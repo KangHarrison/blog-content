@@ -1,7 +1,7 @@
 ---
 title: Hexo搭建博客
 author: Harrison
-date: 2022-01-17 18:12:00
+date: 2022-05-10 18:12:00
 categories:
   - "Hexo"
 tags:
@@ -23,24 +23,24 @@ tags:
 > tips：使用yum安装的node位于 `/usr/local/bin/node`；可以使用 `which node` 查看
 
 ### 1、Server上安装Hexo
-1、安装Hexo客户端（`npm install -g hexo-cli`）
-2、查看Hexo版本号（`hexo -v`）
++ 安装Hexo客户端（`npm install -g hexo-cli`）
++ 查看Hexo版本号（`hexo -v`）
 > tips：使用npm安装的hexo位于 `/usr/local/bin/hexo`；可以使用 `which hexo` 查看
 
 ### 2、Server上初始化Hexo
-1、在home目录下创建blog文件夹，后续的博客文件都放到这个文件夹下
-2、`cd blog`, 执行 `sudo hexo init`, 初始化Hexo
-3、执行 `hexo s` 可以启动hexo，并通过http://yourIp:4000可以访问
-4、通过 `hexo new "bolgName"` 可以创建博客，位于`blog/source/_post/`，之后可以编辑blobName.md来编写博客内容
-5、写好后，可以 `hexo clean` 清除缓存，再通过 `hexo g` 来生成
-6、此时再执行 `hexo s` ，然后http://yourIp:4000就可以看到更新后的博客
++ 在home目录下创建blog文件夹，后续的博客文件都放到这个文件夹下
++ `cd blog`, 执行 `sudo hexo init`, 初始化Hexo
++ 执行 `hexo s` 可以启动hexo，并通过`http://yourIp:4000`可以访问
++ 通过 `hexo new "bolgName"` 可以创建博客，位于`blog/source/_post/`，之后可以编辑blobName.md来编写博客内容
++ 写好后，可以 `hexo clean` 清除缓存，再通过 `hexo g` 来生成
++ 此时再执行 `hexo s` ，然后`http://yourIp:4000`就可以看到更新后的博客
 
-tips:后续结合GitHub Actions，则不再需要执行 `hexo s` 启动hexo，只需通过 `hexo g` 生成静态文件让nginx访问即可。
+> tips:后续结合GitHub Actions，则不再需要执行 `hexo s` 启动hexo，只需通过 `hexo g` 生成静态文件让nginx访问即可。
 
 ### 3、Hexo + Nginx
-1、Server上安装Nginx，`yum install nginx`
++ Server上安装Nginx，`yum install nginx`
 > 此时可以通过 `systemctl status nginx` 查看nginx的状态为：inactive (dead)
-2、编辑nginx的配置文件`/etc/nginx/nginx.conf`
++ 编辑nginx的配置文件`/etc/nginx/nginx.conf`
 > tips:利用yum安装nginx的配置文件在这个路径，而nginx脚本在 `/usr/sbin/nginx`
 ```
 location / {
@@ -49,18 +49,18 @@ location / {
     try_files $uri $uri/ /index.html;
 }
 ```
-3、建议将hexo目录下的`_config.yml`中的`root`和`url`进行如下配置，否则生成后的JS和CSS文件可能无法读取：
++ 建议将hexo目录下的`_config.yml`中的`root`和`url`进行如下配置，否则生成后的JS和CSS文件可能无法读取：
 ```yaml
 url: http://yourIp/
 root: /
 ```
-4、启动nginx `systemctl start nginx`
++ 启动nginx `systemctl start nginx`
 > 此时可以通过 `systemctl status nginx` 查看nginx的状态为：active (running)
-5、此时通过IP即可看到自己的博客内容了。
++ 此时通过IP即可看到自己的博客内容了。
 
 ### 4、GitHub Actions + Hexo + Nginx
-1、在自己的blog repo中创建部署工作流文件，例如：`.github/workflows/deploy.yml`
-2、在deploy.yml中：
++ 在自己的blog repo中创建部署工作流文件，例如：`.github/workflows/deploy.yml`
++ 在deploy.yml中：
 ```yml
 name: Deploy site files
 
@@ -96,20 +96,19 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
           # 重启的脚本，根据自身情况做相应改动
-          script: /root/blog/source/deploy.sh
+          script: | 
+            cd /root/blog/source/
+            ./deploy.sh
 ```
 
 > 其中secrets.DEPLOY_KEY 、 secrets.SSH_HOST 、 secrets.SSH_USERNAME 为repo -> settings -> Secrets -> Actions 中配置的secret。
+
 具体配置方式参考[这篇博客](https://frostming.com/2020/04-26/github-actions-deploy/)中的 `建立 SSH 密钥对` 和 `将自动化配置写到 GitHub 仓库` 这两小节
+
 deploy.yml中最后一行执行的脚本为：
 ```shell
 #!/bin/sh
 
-blogsPath=/root/blog/source/blogs
-if [ ! -d "$blogsPath" ]; then
-    echo 'blogs file not exist'
-    exit 0
-fi
 rm -rf /root/blog/source/_posts
 mv /root/blog/source/blogs /root/blog/source/_posts
 /usr/local/bin/hexo clean
