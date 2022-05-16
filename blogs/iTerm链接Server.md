@@ -3,11 +3,11 @@ title: iTerm链接Remote Server
 date: 2022-05-09 13:29:00
 author: Harrison
 categories:
-  - 'iTerm'
+  - "iTerm"
 tags:
   - "Learning"
-  - 'iTerm'
-  - 'Server'
+  - "iTerm"
+  - "Server"
 
 ---
 iTerm链接Remote Server~

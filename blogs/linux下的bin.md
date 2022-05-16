@@ -3,9 +3,9 @@ title: Linux下bin的区别
 date: 2022-05-09 13:29:00
 author: Harrison
 categories:
-  - 'Linux'
+  - "Linux"
 tags:
-  - 'Learning'
+  - "Learning"
 
 ---
 Linux下bin的区别~

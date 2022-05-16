@@ -3,11 +3,11 @@ title: docker + zookeeper实操部署grpc-kit
 date: 2022-05-09 13:52:00
 author: Harrison
 categories:
-  - 'Java'
+  - "Java"
 tags:
-  - 'gRPC'
-  - 'docker'
-  - 'zookeeper'
+  - "gRPC"
+  - "docker"
+  - "zookeeper"
 
 ---
 docker + zookeeper实操部署grpc-kit

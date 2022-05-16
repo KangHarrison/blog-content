@@ -3,9 +3,9 @@ title: iTerm快捷键
 date: 2022-05-09 13:29:00
 author: Harrison
 categories:
-  - 'iTerm'
+  - "iTerm"
 tags:
-  - 'iTerm'
+  - "iTerm"
 
 ---
 iTerm快捷键 mark~

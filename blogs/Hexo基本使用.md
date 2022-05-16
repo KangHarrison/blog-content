@@ -3,10 +3,10 @@ title: Hexo编写博客教程
 date: 2020-08-01 00:12:34
 author: Harrison
 categories:
-  - 'Hexo'
+  - "Hexo"
 tags:
-  - 'Learning'
-  - 'Blog'
+  - "Learning"
+  - "Blog"
 ---
 
 这是我的第一篇博客，包含Hexo的基本使用，是一篇测试博客。

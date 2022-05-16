@@ -3,9 +3,9 @@ title: demo blog
 date: 2020-08-03 17:34:32
 author: Harrison
 categories:
-  - 'demo'
+  - "demo"
 tags:
-  - 'demo'
+  - "demo"
 
 ---
 this blog's summary ~

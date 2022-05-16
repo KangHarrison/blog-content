@@ -3,10 +3,10 @@ title: LRU算法的实现
 date: 2020-08-11 18:34:52
 author: Harrison
 categories:
-  - 'Java'
+  - "Java"
 tags:
-  - 'LRU'
-  - 'Learning'
+  - "LRU"
+  - "Learning"
 ---
 LRU算法的实现，欢迎交流，指正错误。
 <!-- more -->

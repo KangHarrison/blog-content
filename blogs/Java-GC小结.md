@@ -3,10 +3,10 @@ title: Java GC 知识小结
 date: 2020-08-03 17:34:32
 author: Harrison
 categories:
-  - 'Java'
+  - "Java"
 tags:
-  - 'JVM'
-  - 'Learning'
+  - "JVM"
+  - "Learning"
 ---
 Java GC相关知识小结，欢迎交流，指正错误。
 <!-- more -->
