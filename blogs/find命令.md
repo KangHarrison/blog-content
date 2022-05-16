@@ -8,7 +8,7 @@ tags:
   - "Learning"
 
 ---
-this blog's summary ~
+find命令使用总结～
 <!-- more -->
 ### 1、用文件名查找文件
 这是find命令的一个基本用法。下面的例子展示了用"test.txt"作为查找名在当前目录及其子目录中查找文件的方法。
