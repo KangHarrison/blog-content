@@ -1,5 +1,5 @@
 ---
-title: IOC容器注入Bean的方式
+title: IoC容器注入Bean的方式
 author: Harrison
 date: 2020-08-19 11:16:13
 categories:
