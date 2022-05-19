@@ -63,7 +63,7 @@ ssh免密登录原理：
 ```shell
 #!/bin/sh
 
-`ssh <user>@<ip>`
+ssh <user>@<ip>
 ```
 
 <user> <ip> 换成自己的相关信息
