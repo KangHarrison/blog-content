@@ -43,7 +43,7 @@ Host gitlab
 4、测试
 + 终端执行`ssh -T git@github.com`，成功的话会返回successful
 
-5、遇到报错
-+ 后续遇到Github报permission denied错就在终端执行：`ssh-add -k ~/.ssh/id_rsa_github`
-+ 后续遇到Gitlab报permission denied错就在终端执行：`ssh-add -k ~/.ssh/id_rsa_gitlab`
+5、some errors
++ 提示需要输入Github或Gitlab密码，则在终端执行：`ssh-add -k ~/.ssh/id_rsa_github` 或 `ssh-add -k ~/.ssh/id_rsa_gitlab`
++ 遇到Github或Gitlab报permission denied错就在终端执行：`ssh-add -k ~/.ssh/id_rsa_github` 或 `ssh-add -k ~/.ssh/id_rsa_gitlab`
 
